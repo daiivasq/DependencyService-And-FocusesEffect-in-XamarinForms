@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="TAREA7.Views.LoginPage"
              xmlns:local="clr-namespace:TAREA7.Effects"
+             BackgroundImageSource="login.jpg" Opacity="0.3"
            
              >
     <ContentPage.Content >
@@ -39,8 +40,7 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image Source="login.jpg" Opacity="0.3" Aspect="AspectFit" Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="10"/>
-                <!--TITTLE AND SUBTITTLE " LOGIN AND SIGN UP"-->
+            
 
                 <Label
                     Text="Login"
@@ -99,24 +99,6 @@
 
                 </Entry>
 
-
-                <Image Source="{Binding ImageModel}"
-                       HeightRequest="30"
-                       VerticalOptions="Center"
-                       Grid.Row="3"
-                       Grid.ColumnSpan="9"
-                       HorizontalOptions="End"
-                       x:Name="eyeLogin"/>
-                
-                <Image Source="gps.pnj"
-                       HeightRequest="30"
-                       Grid.Row="4"
-                       Grid.ColumnSpan="9"
-                       HorizontalOptions="EndAndExpand"
-                       VerticalOptions="StartAndExpand"
-                       
-                     />
-
                 <Button
                     Text="LOG IN"
                     x:Name="ButtonLogIn"
@@ -128,7 +110,6 @@
                     Opacity="0.5"
                 />
 
-                <!--"LOGIN WITH" -->
 
                
             </Grid>
