@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TAREA7.Views.LoginPage"
+             xmlns:local="clr-namespace:TAREA7.Effects"
+           
+             >
+    <ContentPage.Content >
+
+        <ScrollView>
+
+            <Grid  Padding="30" ColumnSpacing="5" RowSpacing="20">
+
+                <!--GRID DEFINITIONS-->
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="120" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="100" />
+
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="login.jpg" Opacity="0.3" Aspect="AspectFit" Grid.Row="0" Grid.RowSpan="9" Grid.Column="0" Grid.ColumnSpan="10"/>
+                <!--TITTLE AND SUBTITTLE " LOGIN AND SIGN UP"-->
+
+                <Label
+                    Text="Login"
+                    TextColor="White"
+                    FontSize="35"
+                    FontAttributes="Bold"
+                    HorizontalOptions="StartAndExpand"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="10"
+                    />
+
+                <Label
+                    Text="Sign Up"
+                    TextColor="LightGray"
+                    FontSize="20"
+                    Margin="-20,10"
+                    FontAttributes="Bold"
+                    
+                    HorizontalOptions="EndAndExpand"
+                    Grid.Row="0"
+                    Grid.ColumnSpan="9"
+                    />
+
+                <!--Email adrees or username and Password" and button "LOG IN-->
+                <Entry Placeholder="Username or email address"
+                       PlaceholderColor="White"
+                       Text="" 
+                       TextColor="White"
+                       x:Name="UserLogin"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       Grid.ColumnSpan ="8"
+                       VerticalOptions="StartAndExpand"
+                       Opacity="0.5"
+                       >
+                    <Entry.Effects>
+                        <local:FocusEntryEffect/>
+                    </Entry.Effects>
+
+                </Entry>
+
+                <Entry Placeholder="Password"
+                       Text=""
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       IsPassword="True"
+                       x:Name="PassWordLogin"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       Grid.ColumnSpan ="8"
+                       VerticalOptions="StartAndExpand"
+                       Opacity="0.5">
+                    <Entry.Effects>
+                        <local:FocusEntryEffect/>
+                    </Entry.Effects>
+
+                </Entry>
+
+
+                <Image Source="{Binding ImageModel}"
+                       HeightRequest="30"
+                       VerticalOptions="Center"
+                       Grid.Row="3"
+                       Grid.ColumnSpan="9"
+                       HorizontalOptions="End"
+                       x:Name="eyeLogin"/>
+                
+                <Image Source="gps.pnj"
+                       HeightRequest="30"
+                       Grid.Row="4"
+                       Grid.ColumnSpan="9"
+                       HorizontalOptions="EndAndExpand"
+                       VerticalOptions="StartAndExpand"
+                       
+                     />
+
+                <Button
+                    Text="LOG IN"
+                    x:Name="ButtonLogIn"
+                    HorizontalOptions="Fill"
+                    Grid.Row="5"
+                    Grid.Column="2"
+                    Grid.ColumnSpan="6"
+                    CornerRadius="200"
+                    Opacity="0.5"
+                />
+
+                <!--"LOGIN WITH" -->
+
+               
+            </Grid>
+
+        </ScrollView>
+       
+      
+    </ContentPage.Content>
+</ContentPage>
